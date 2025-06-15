@@ -119,7 +119,9 @@ def extract_fashion_data(base_url: str = "https://fashion-studio.dicoding.dev/",
         if page == 1:
             page_url = base_url
         else:
-            page_url = f"{base_url}?page={page}"
+            # Remove trailing slash if present and add page number
+            base_clean = base_url.rstrip('/')
+            page_url = f"{base_clean}/page{page}"
         
         print(f"Scraping page {page}... ", end="")
         
