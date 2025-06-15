@@ -22,3 +22,8 @@ Usage Instructions:
 3. Run with custom pages: python main.py --max-pages 50
 4. Run tests: pytest tests/
 5. Custom usage: python main.py --url <URL> --output <filename> --mode <overwrite|append> --max-pages <number>
+6. Run the complete test suite: pytest tests/ -v
+7. Run specific test modules:
+   - pytest tests/test_extract.py -v
+   - pytest tests/test_transform.py -v
+   - pytest tests/test_load.py -v
