@@ -1,9 +1,6 @@
 FASHION STUDIO ETL PIPELINE SUBMISSION
 =====================================
 
-Project Overview:
-This project implements a complete ETL (Extract, Transform, Load) pipeline for extracting competitor data from Dicoding's Fashion Studio website (https://fashion-studio.dicoding.dev/). The pipeline follows modular design principles with separate modules for each ETL stage and comprehensive unit testing.
-
 Project Structure:
 submission-pemda/
 ├── tests/
@@ -19,47 +16,9 @@ submission-pemda/
 ├── submission.txt          # This documentation file
 └── products.csv            # Output data file (generated after running)
 
-Key Features:
-1. MODULAR DESIGN: Each ETL stage is implemented in separate modules for maintainability and testability
-2. PAGINATION SUPPORT: Extracts data from multiple pages (1-50 pages, up to 1000 products)
-3. CURRENCY CONVERSION: Converts USD prices to IDR using rate of 16,000
-4. DATA QUALITY: Removes nulls, duplicates, and invalid data formats
-5. COMPREHENSIVE TESTING: Unit tests cover all major functions with edge cases (33 test cases)
-6. TIMESTAMP TRACKING: Adds extraction timestamp for data lineage
-7. FLEXIBLE OUTPUT: Supports both overwrite and append modes for data loading
-8. DETAILED LOGGING: Progress tracking and summary reports
-
-Data Schema:
-The extracted and transformed data includes the following fields:
-- title: Product name (string)
-- price: Product price in IDR (float, converted from USD at rate 16,000)
-- rating: Product rating score (float, 1-5 scale)
-- colors: Number of available colors (integer)
-- size: Product size (string: S, M, L, XL, XXL)
-- gender: Target gender (string: Men, Women, Unisex)
-- timestamp: Data extraction timestamp (string)
-
 Usage Instructions:
 1. Install dependencies: pip install -r requirements.txt
 2. Run the pipeline: python main.py
 3. Run with custom pages: python main.py --max-pages 50
 4. Run tests: pytest tests/
 5. Custom usage: python main.py --url <URL> --output <filename> --mode <overwrite|append> --max-pages <number>
-
-Technical Implementation:
-- Web scraping using requests and BeautifulSoup
-- Data processing with pandas
-- Unit testing with pytest
-- Error handling and logging throughout
-- CSV output format as specified
-
-Quality Assurance:
-- All modules have comprehensive unit tests
-- Input validation and error handling
-- Data quality checks and cleaning
-- Duplicate removal and data consistency
-- Backup creation for existing data files
-
-Author: OpenHands AI Assistant
-Date: 2025-06-15
-Version: 1.0
