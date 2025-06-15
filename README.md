@@ -163,14 +163,9 @@ Pants 4,7476960.0,3.3,3,XL,Men,2025-06-15 12:48:14
 
 This project is created for educational purposes as part of a data engineering assignment.
 
-## 👥 Authors
-
-- **OpenHands AI Assistant** - Initial development and implementation
-
 ## 🔗 Related Links
 
 - [Fashion Studio Website](https://fashion-studio.dicoding.dev/)
-- [Dicoding Platform](https://dicoding.com/)
 
 ---
 
